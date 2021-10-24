@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+
 
 class Cover extends React.Component {
   // Props - header, content, side-bool(disply side of picture), image
