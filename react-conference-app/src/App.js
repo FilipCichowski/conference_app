@@ -1,42 +1,17 @@
-import "./styles/output.css";
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-import Details from "./components/Details";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
+import Contact from "./pages/Contact";
+import Header from "./components/Header";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <div className="bg-black">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/Home">Home</Link>
-              </li>
-              <li>
-                <Link to="/details">Details</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <Switch>
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/details">
-            <Details />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <Header />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/details" component={Details} />
+      <Route exact path="/contact" component={Contact} />
+    </div>
   );
 }
 
