@@ -28,10 +28,14 @@ class Details extends React.Component {
 
   render() {
     const { error, details } = this.state;
-
+    
     if (error) {
       return <div>Something went wrong :( {error.message}</div>;
     }
+
+    this.state.details.map((detail) => (
+      console.log(detail.Name)
+    ))
 
     return (
       <>
