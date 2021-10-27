@@ -1,38 +1,3 @@
-// import * as React from "react";
-// import axios from "axios";
-
-// class Gallery extends React.Component {
-//   state = {
-//     details: [],
-//     error: null,
-//   };
-
-//   componentDidMount = async () => {
-//     try {
-//       const response = await axios.get(
-//         "https://janek-filip-conference-app.herokuapp.com/galleries"
-//       );
-//       this.setState({ details: response.data });
-//     } catch (error) {
-//       this.setState({ error });
-//     }
-//   };
-
-//   render() {
-//     const { error, details } = this.state;
-
-//     this.state.details.map((detail) => console.log(detail.Year));
-
-//     if (error) {
-//       return <div>Something went wrong :( {error.message}</div>;
-//     }
-
-//     return <></>;
-//   }
-// }
-
-// export default Gallery;
-
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -69,11 +34,11 @@ class Gallery extends React.Component {
         <ImageListItem key="Subheader" cols={2}>
           <ListSubheader component="div">December</ListSubheader>
         </ImageListItem>
-        {itemData.map((item) => (
+        {details.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={'https://janek-filip-conference-app.herokuapp.com'+ item.Picture[0].url+'?w=248&fit=crop&auto=format'}
+              srcSet={'https://janek-filip-conference-app.herokuapp.com'+ item.Picture[0].url+'?w=248&fit=crop&auto=format'+'?w=248&fit=crop&auto=format&dpr=2 2x'}
               alt={item.title}
               loading="lazy"
             />
