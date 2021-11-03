@@ -3,6 +3,7 @@ import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import { Route } from "react-router-dom";
+import React from 'react';
 
 function App() {
   return (
