@@ -1,9 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
 import Gallery from "../components/Gallery";
-import Typography from "@mui/material/Typography";
-import LazyHero from "react-lazy-hero";
-import HeroUI from "../components/UI/HeroUI";
+import HeroUI from "../components/HeroUI";
+import Footer from "../components/Footer";
 import "../globalStyles.css";
 
 function Home() {
@@ -19,9 +18,12 @@ function Home() {
           "Meet legendary developers and play best games on vintage machines"
         }
         buttonText={"More details"}
-        showButton={true}></HeroUI>
+        showButton={true}
+      ></HeroUI>
 
-      <Gallery />
+
+      <Footer/>
+      
     </>
   );
 }
