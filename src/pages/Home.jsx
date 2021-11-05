@@ -20,8 +20,6 @@ function Home() {
         buttonText={"More details"}
         showButton={true}
       ></HeroUI>
-
-
       <Footer/>
       
     </>
