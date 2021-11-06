@@ -7,7 +7,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ background: "#050709" }}>
       <Header />
       <Route exact path="/" component={Home} />
       <Route exact path="/details" component={Details} />

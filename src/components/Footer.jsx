@@ -24,7 +24,6 @@ function Footer({ classes }) {
       maxWidth="false"
       style={{
         color: "#FFFFFE",
-        backgroundColor: "#030303",
         height: 35,
       }}
     >

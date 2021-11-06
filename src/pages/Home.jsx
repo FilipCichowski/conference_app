@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import HeroUI from "../components/HeroUI";
 import Footer from "../components/Footer";
+import Guests from "../components/Guests";
 import "../globalStyles.css";
 
 function Home() {
@@ -20,8 +21,9 @@ function Home() {
         buttonText={"More details"}
         showButton={true}
       ></HeroUI>
-      <Footer/>
-      
+      <Guests />
+      <Gallery/>
+      <Footer />
     </>
   );
 }
