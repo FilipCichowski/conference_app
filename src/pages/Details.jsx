@@ -1,12 +1,9 @@
 import React from "react";
 import axios from "axios";
-<<<<<<< HEAD
-=======
-import Cover from "../components/UI/Cover";
+
 import PhotoSection from "../components/UI/PhotoSection";
-import HeroUI from "../components/UI/HeroUI";
+import HeroUI from "../components/HeroUI";
 import { Container } from "@material-ui/core";
->>>>>>> detailsPage
 
 let tempText = [
   "Our event takes place at the Gaylord Texan Resort & Convention Center, 1501 Gaylord Trail, Grapevine, TX 76051, United States. At our disposal is the main hall where meetings with programmers will be held, in front of it we have a smaller room where you can play vintage machines.",
@@ -33,19 +30,12 @@ class Details extends React.Component {
 
   render() {
     const { error, details } = this.state;
-<<<<<<< HEAD
-    
-
-    return (
-      <>
-      dupa
-=======
 
     if (error) {
       return <div>Something went wrong :( {error.message}</div>;
     }
 
-    this.state.details.map((detail) => console.log(detail.Name));
+    details.map((detail) => console.log(detail.Name));
 
     return (
       <>
@@ -77,7 +67,6 @@ class Details extends React.Component {
         />
         })}
         </Container>
->>>>>>> detailsPage
       </>
     )
   }

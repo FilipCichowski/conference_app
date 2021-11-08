@@ -9,7 +9,7 @@ import "../globalStyles.css";
 function Home() {
   return (
     <>
-      <Header />
+      
       <HeroUI
         url={
           "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1565&q=80"
@@ -23,7 +23,7 @@ function Home() {
       ></HeroUI>
       <Guests />
       <Gallery/>
-      <Footer />
+      
     </>
   );
 }
