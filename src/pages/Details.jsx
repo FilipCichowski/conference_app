@@ -19,9 +19,7 @@ class Details extends React.Component {
 
   componentDidMount = async () => {
     try {
-      const response = await axios.get(
-        "https://janek-filip-conference-app.herokuapp.com/details"
-      );
+      const response = await axios.get("http://localhost:1337/details");
       this.setState({ details: response.data });
     } catch (error) {
       this.setState({ error });
@@ -40,35 +38,50 @@ class Details extends React.Component {
     return (
       <>
         <HeroUI
-          url={"https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1565&q=80"}
+          url={
+            "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1565&q=80"
+          }
           header={"Want to know more about our event?"}
-          suheader={"We collected most important informations in one place for you"}
+          suheader={
+            "We collected most important informations in one place for you"
+          }
           buttonText={"Read more"}
           showButton={true}></HeroUI>
-        
-        <Container p={5}>
-        {this.state.details.map((detail, index) =>{
-         let alternatingSide = true;
-         console.log(index%2);
-          if(index%2==0)
-          {
-            alternatingSide = true;
-          }
-          else
-          {
-            alternatingSide = false;
-          }
-          return <PhotoSection
-          key={detail.id}
-          header={detail.Name}
-          content={detail.Description}
-          image={'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1565&q=80'}
-          side={alternatingSide}
-        />
-        })}
+
+        <Container
+          p={5}
+          style={{
+            fontFamily: "Source Sans Pro, sans-serif",
+            fontSize: 40,
+            paddingLeft: 0,
+            background: "#050709",
+            color: "#ffffff",
+            paddingTop: "3vh",
+            paddingBottom: "3vh",
+          }}>
+          {this.state.details.map((detail, index) => {
+            let alternatingSide = true;
+            console.log(index % 2);
+            if (index % 2 == 0) {
+              alternatingSide = true;
+            } else {
+              alternatingSide = false;
+            }
+            return (
+              <PhotoSection
+                key={detail.id}
+                header={detail.title}
+                content={detail.description}
+                image={
+                  "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1565&q=80"
+                }
+                side={alternatingSide}
+              />
+            );
+          })}
         </Container>
       </>
-    )
+    );
   }
 }
 
