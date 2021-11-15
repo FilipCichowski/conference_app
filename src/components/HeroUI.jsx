@@ -30,7 +30,8 @@ class HeroUI extends React.Component {
         color="#020202"
         opacity="0.2"
         parallaxOffset="75"
-        style={{ margin: 0, padding: 0 }}>
+        style={{ margin: 0, padding: 0 }}
+      >
         <div style={hero}>
           <h1 style={header}>{this.props.header}</h1>
           <h2 style={subheader}>{this.props.subheader}</h2>
@@ -44,7 +45,8 @@ class HeroUI extends React.Component {
                 fontFamily: "Source Sans Pro",
                 marginTop: 100,
                 padding: "15px 80px",
-              }}>
+              }}
+            >
               {this.props.buttonText}
             </Button>
           )}

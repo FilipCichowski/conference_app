@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import IconButton from "@mui/material/IconButton";
 import axios from "axios";
 import { Container } from "@mui/material";
-import { borders } from "@mui/system";
 import { ListSubheader } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 class Guests extends React.Component {
   state = {
@@ -25,7 +24,7 @@ class Guests extends React.Component {
   };
 
   render() {
-    const { error, details, url } = this.state;
+    const { details, url } = this.state;
     return (
       <Container maxWidth="xl">
         <ImageList sx={{ mx: "auto", width: "80vw" }} gap={15} cols={3}>
@@ -37,11 +36,13 @@ class Guests extends React.Component {
                 paddingLeft: 0,
                 background: "#050709",
                 color: "#ffffff",
-                paddingTop: "4vh",
-                paddingBottom: "4vh",
+                paddingTop: "8vh",
+                paddingBottom: "8vh",
               }}
             >
-              Meet our guests
+              <Typography variant="h2" sx={{ fontWeight: 600 }}>
+                Meet our guests
+              </Typography>
             </ListSubheader>
           </ImageListItem>
           {details.map((item) => (
@@ -56,9 +57,17 @@ class Guests extends React.Component {
                 loading="lazy"
               />
               <ImageListItemBar
-                style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-                title={item.name}
-                subtitle={item.description}
+                sx={{ fontFamily: "Source Sans Pro, sans-serif" }}
+                title={
+                  <Typography variant="h4" sx={{ fontSize: 26 }}>
+                    {item.name}
+                  </Typography>
+                }
+                subtitle={
+                  <Typography variant="h6" sx={{ fontSize: 16 }}>
+                    {item.description}
+                  </Typography>
+                }
               />
             </ImageListItem>
           ))}
