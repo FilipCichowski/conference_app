@@ -13,7 +13,7 @@
   </div>
 </div>
 
-# Getting Started Conference App :cat:
+# Getting Started Conference App :notebook_with_decorative_cover:
 
 This project is website dedicated to gamers conference and games creators. It was created to enchence team working and React skills. In this project we are using headless CMS Strapi as a source for data on website. 
 
